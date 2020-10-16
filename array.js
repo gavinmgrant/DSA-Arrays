@@ -1,4 +1,4 @@
-const memory = require('./memory');
+const memory = require('./memory.js');
 
 class Array {
     constructor() {
@@ -59,7 +59,7 @@ class Array {
 
     remove(index) {
         if (index < 0 || index >= this.length) {
-            throw new Error('INdex error');
+            throw new Error('Index error');
         }
         memory.copy(this.ptr + index, this.ptr + index + 1, this.length - index - 1);
         this.length--;
@@ -67,3 +67,13 @@ class Array {
 }
 
 Array.SIZE_RATIO = 3;
+
+function main() {
+    Array.SIZE_RATIO = 3;
+
+    let arr =  new Array();
+    arr.push(3);
+    console.log(arr);
+}
+
+main();
