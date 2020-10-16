@@ -1,10 +1,13 @@
-const memory = require('./memory.js');
+const Memory = require('./memory');
+
+const memory = new Memory();
 
 class Array {
     constructor() {
         this.length = 0;
         this._capacity = 0;
         this.ptr = memory.allocate(this.length);
+        console.log('constructor: ' + this.ptr);
     }
 
     push(value) {
@@ -13,12 +16,14 @@ class Array {
         }
         
         memory.set(this.ptr + this.length, value);
+        console.log('push: ' + this.ptr);
         this.length++;
     }
     
     _resize(size) {
         const oldPtr = this.ptr;
         this.ptr = memory.allocate(size);
+        console.log('resize: ' + this.ptr);
         if (this.ptr === null) {
             throw new Error('Out of memory');
         }
@@ -71,8 +76,14 @@ Array.SIZE_RATIO = 3;
 function main() {
     Array.SIZE_RATIO = 3;
 
-    let arr =  new Array();
+    let arr = new Array();
     arr.push(3);
+    arr.push(5);
+    arr.push(15);
+    arr.push(19);
+    arr.push(45);
+    arr.push(10);
+   
     console.log(arr);
 }
 
