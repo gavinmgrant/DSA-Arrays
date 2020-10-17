@@ -7,7 +7,6 @@ class Array {
         this.length = 0;
         this._capacity = 0;
         this.ptr = memory.allocate(this.length);
-        console.log('constructor: ' + this.ptr);
     }
 
     push(value) {
@@ -16,14 +15,12 @@ class Array {
         }
         
         memory.set(this.ptr + this.length, value);
-        console.log('push: ' + this.ptr);
         this.length++;
     }
     
     _resize(size) {
         const oldPtr = this.ptr;
         this.ptr = memory.allocate(size);
-        console.log('resize: ' + this.ptr);
         if (this.ptr === null) {
             throw new Error('Out of memory');
         }
@@ -76,6 +73,7 @@ Array.SIZE_RATIO = 3;
 function main() {
     Array.SIZE_RATIO = 3;
 
+    // Make an instance of the Array class.
     let arr = new Array();
     arr.push(3);
     arr.push(5);
@@ -83,12 +81,22 @@ function main() {
     arr.push(19);
     arr.push(45);
     arr.push(10);
-
     arr.pop();
     arr.pop();
     arr.pop();
-   
     console.log(arr);
+
+    // Print the 1st item in the array `arr`.
+    console.log(arr.get(0));
+
+    // Empty the array and add just 1 item: `arr.push("tauhida")`.
+    arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.push("tauhida");  
+    
+    //Print this 1 item that you just added.
+    console.log(arr.get(0));
 }
 
 main();

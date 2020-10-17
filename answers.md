@@ -46,10 +46,30 @@ What is the length, capacity and memory address of your array? Explain the resul
 
 ```
 ...
-arr.pop();
-arr.pop();
-arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.pop();
 ```
 
 What is the length, capacity, and address of your array? Explain the result of your program after adding the new lines of code.
 * `Array { length: 3, _capacity: 12, ptr: 3 }` The pop method removed the last item of the array each time it was called.
+
+## 4. Understanding more about how arrays work.
+
+Print the 1st item in the array `arr`.
+* Answer: Time complexity is O(1). `console.log(arr.get(0));`
+
+Empty the array and add just 1 item: `arr.push("tauhida")`.
+* Answer: Time complexity is O(1).
+```
+    arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.push("tauhida")
+```
+
+Print this 1 item that you just added. What is the result? Can you explain your result?
+* Answer: Time complexity is O(1). `tauhida`
+
+What is the purpose of the `_resize()` function in your Array class?
+* Answer: To increase the amount of memory for new items as they get added.
