@@ -1,3 +1,5 @@
+// Write a method that takes in a string and replaces all its empty spaces with a %20. Your algorithm can only make 1 pass through the string.
+
 const urlify = string => {
     const arr = string.split('');
 
@@ -10,7 +12,7 @@ const urlify = string => {
             return char;
         }
     })
-    
+
     return urled.join('');
 };
 

@@ -1,3 +1,5 @@
+// Write an algorithm to remove all numbers less than 5 from the array. DO NOT use Array's built-in .filter() method.
+
 const filterArr = array => {
     const newArr = [];
 
