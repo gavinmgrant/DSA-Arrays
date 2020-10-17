@@ -14,3 +14,5 @@ const filterArr = array => {
 };
 
 console.log(filterArr([5, 10, 1, 2, 12, 9]));
+
+// complexity: O(n)

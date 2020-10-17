@@ -9,3 +9,5 @@ const mergeArr = (arr1, arr2) => {
 };
 
 console.log(mergeArr([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+
+// complexity: O(n)

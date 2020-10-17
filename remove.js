@@ -37,3 +37,5 @@ const removeChar = (string, remove) => {
 };
 
 console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+
+// complexity: O(1)

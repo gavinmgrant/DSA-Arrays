@@ -1,6 +1,6 @@
 // You are given an array containing positive and negative integers. 
 // Write an algorithm which will find the largest sum in a continuous sequence.
-
+let ticks = 0;
 const maxSum = arr => {
     let maxNow = 0;
     let maxAll = 0;
@@ -20,3 +20,5 @@ const maxSum = arr => {
   }
   
   console.log(maxSum([4, 6, -3, 5, -2, 1]));
+
+  // complexity: O(n)

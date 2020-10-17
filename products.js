@@ -12,3 +12,5 @@ const products = arr => {
 };
 
 console.log(products([1, 3, 9, 4]));
+
+// complexity: O(n)

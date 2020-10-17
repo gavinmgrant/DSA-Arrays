@@ -17,3 +17,5 @@ const urlify = string => {
 };
 
 console.log(urlify('www.thinkful.com /tauh ida parv een'));
+
+// complexity: O(n)

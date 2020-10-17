@@ -22,3 +22,5 @@ const stringRotation = (str1, str2) => {
 };
 
 console.log(stringRotation('amazon', 'zonama'));
+
+// complexity: 0(n)
