@@ -69,7 +69,7 @@ Empty the array and add just 1 item: `arr.push("tauhida")`.
 ```
 
 Print this 1 item that you just added. What is the result? Can you explain your result?
-* Answer: Time complexity is O(1). `tauhida`
+* Answer: Time complexity is O(1). `NaN`, because the input is a string and not a number.
 
 What is the purpose of the `_resize()` function in your Array class?
 * Answer: To increase the amount of memory for new items as they get added.
