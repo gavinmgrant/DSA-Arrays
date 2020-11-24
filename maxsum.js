@@ -8,7 +8,7 @@ const maxSum = arr => {
     for (let i = 0; i < arr.length; i++) {
         // Math.max() function returns the largest of the zero or more numbers given as input parameters
         // determine the maximum sum of the numbers in this iteration
-        maxNow = Math.max(0, maxNow + arr[i]);
+        maxNow = Math.max(maxNow, arr[i]);
         // determine the highest max for all sums
         maxAll = Math.max(maxAll, maxNow);
 
